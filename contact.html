@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#000;color:#fff;}
+header{background:#111;padding:15px;text-align:center;}
+nav a{color:gold;margin:10px;text-decoration:none;font-weight:bold;}
+.section{text-align:center;padding:30px;}
+input,textarea{width:90%;padding:10px;margin:10px;border-radius:5px;border:none;}
+button{background:gold;border:none;padding:12px 20px;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;}
+</style>
+<script>
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
+let url="https://wa.me/1234567890?text="
++"Name: "+name+"%0a"
++"Phone: "+phone+"%0a"
++"Message: "+msg;
+window.open(url,"_blank");
+}
+</script>
+</head>
+<body>
+<header>
+<h2>Contact Us</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+<div class="section">
+<h3>Book Your Ride</h3>
+<input id="name" placeholder="Your Name"><br>
+<input id="phone" placeholder="Phone Number"><br>
+<textarea id="msg" placeholder="Your Message"></textarea><br>
+<button onclick="sendWhatsApp()">Send via WhatsApp</button>
+</div>
+<a class="whatsapp" href="https://wa.me/918220479254">💬</a>
+</body>
+</html>
